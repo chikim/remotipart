@@ -117,11 +117,7 @@
     function cleanUp() {
       markers.each(function(i){
         $(this).replaceWith(files[i]);
-        markers.splice(i, 1);
       });
-      form.remove();
-      iframe.bind("load", function() { iframe.remove(); });
-      iframe.attr("src", "about:blank");
     }
 
     // Remove "iframe" from the data types list so that further processing is
